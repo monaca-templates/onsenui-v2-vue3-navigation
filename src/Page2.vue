@@ -12,10 +12,9 @@
   export default {
     methods: {
       pop() {
-        this.pageStack.pop();
+        this.$emit('pop');
       } 
     },
-    props: ['pageStack'],
     components: { customToolbar },
     key: 'key_page2',
   }

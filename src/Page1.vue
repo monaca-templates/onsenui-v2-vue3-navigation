@@ -14,13 +14,12 @@
   export default {
      methods: {
        pop(){
-         this.pageStack.pop();
+         this.$emit('pop');
        },
        push() {
-         this.pageStack.push(page2);
+         this.$emit('push', page2);
        }
      },
-     props: ['pageStack'],
      components: { customToolbar },
      key: 'key_page1',
   }

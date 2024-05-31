@@ -1,6 +1,8 @@
 <template>
-  <v-ons-navigator :page-stack="pageStack">
-    <component :is="page" v-for="page in pageStack" :key="page.key" :page-stack="pageStack"></component>
+  <v-ons-navigator :page-stack="pageStack"
+    @push="pageStack = [...pageStack, $event]"
+    @pop="packStage = pageStack.slice(0, -1)"
+  >
   </v-ons-navigator>
 </template>
 
