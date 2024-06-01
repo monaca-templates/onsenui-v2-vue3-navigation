@@ -1,5 +1,5 @@
 <template>
-  <v-ons-navigator :page-stack="pageStack"
+  <v-ons-navigator v-model:page-stack="pageStack"
     @push="pageStack = [...pageStack, $event]"
     @pop="packStage = pageStack.slice(0, -1)"
   >
