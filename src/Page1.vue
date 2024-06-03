@@ -13,9 +13,6 @@
   import page2 from './Page2.vue';
   export default {
      methods: {
-       pop(){
-         this.$emit('pop');
-       },
        push() {
          this.$emit('push', page2);
        }
